@@ -1,0 +1,203 @@
+@import "commonStyles";
+
+.projects {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &__title {
+    margin: 0;
+    font-family: $second-family;
+    font-weight: 700;
+    font-size: 24px;
+    color: #202020;
+    margin-bottom: 13px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "id-1 id-1 id-2 id-2 id-3 id-3 id-4 id-4 id-4 id-4 id-4 id-4"
+      "id-5 id-5 id-5 id-5 id-5 id-5 id-6 id-6 id-6 id-7 id-7 id-7";
+  }
+
+  &__item {
+    position: relative;
+    font-size: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    &-1 {
+      grid-area: id-1;
+    }
+
+    &-2 {
+      grid-area: id-2;
+    }
+
+    &-3 {
+      grid-area: id-3;
+    }
+
+    &-4 {
+      grid-area: id-4;
+    }
+
+    &-5 {
+      grid-area: id-5;
+    }
+
+    &-6 {
+      grid-area: id-6;
+    }
+
+    &-7 {
+      grid-area: id-7;
+    }
+
+    &-4,
+    &-5 {
+      padding: 22px 30px 30px 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-4 {
+      background-image: url(../img/progect4.webp);
+      background-repeat: no-repeat;
+    }
+
+    &-5 {
+      background-image: url(../img/progect5.webp);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__picture {
+    display: block;
+    font-size: 0;
+    margin-bottom: 18px;
+  }
+
+  &__text {
+    margin: 0;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #202020;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.2s linear;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    // Дополнительный блок для кроссбраузерной совместимости
+    @supports (-moz-hyphens: auto) or (-ms-hyphens: auto) or (-webkit-hyphens: auto) {
+      line-height: 1.4em; // Устанавливаем высоту строки
+      max-height: calc(1.4em * 3); // Ограничение высоты блока
+      word-wrap: break-word; // Разрыв длинных слов
+    }
+
+    &:hover {
+      color: #ff6e30;
+      transition: color 0.2s linear;
+    }
+  }
+
+  &__calendar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+    }
+    span {
+      display: block;
+      height: 100%;
+
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 22px;
+      color: #999;
+    }
+  }
+
+  &__hashtag {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    padding: 6px 14px;
+    background-color: #202020;
+  }
+
+  &__content {
+    max-width: 292px;
+    margin-bottom: auto;
+    padding-top: 2px;
+  }
+
+  &__calendar {
+    &-title {
+      margin: 0;
+      font-family: $second-family;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    &-text {
+      margin: 0;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+
+  &__btn {
+    padding: 13px 20px 12px 19px;
+    background-color: transparent;
+    border: 3px solid #ff6e30;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    max-width: max-content;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: #ff6e30;
+      transition: color 0.2s linear, background-color 0.2s linear;
+    }
+
+    &:active {
+      background-color: #ce4307;
+      transition: color 0.2s linear, background-color 0.2s linear;
+    }
+  }
+}

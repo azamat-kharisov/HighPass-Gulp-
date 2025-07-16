@@ -1,0 +1,110 @@
+@import "commonStyles";
+.works {
+  padding-bottom: 68px;
+  &__container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__article {
+    position: relative;
+    background-image: url(../img/works1.webp);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 64.4% 145px 61px 59px;
+
+    &-text {
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 16px;
+      color: #fff;
+      margin: 0;
+      margin-bottom: 3px;
+    }
+
+    &-title {
+      font-family: $second-family;
+      font-weight: 700;
+      font-size: 36px;
+      color: #fff;
+      line-height: 37px;
+      margin: 0;
+      margin-bottom: 19px;
+    }
+
+    &-btn {
+      max-width: max-content;
+      padding: 15px 22px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+      background-color: #ff6e30;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s linear;
+
+      &:hover {
+        background-color: #bc572b;
+        transition: background-color 0.2s linear;
+      }
+
+      &:focus {
+        background-color: #ce4307;
+        transition: background-color 0.2s linear;
+      }
+    }
+
+    &-span {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      max-width: max-content;
+      font-family: $font-family;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      padding: 7px 15px;
+      background-color: #202020;
+    }
+  }
+
+  &__prev {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      font-family: $second-family;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 25px;
+      color: #202020;
+      margin: 0;
+      margin-bottom: 18px;
+    }
+
+    &-list {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+
+      list-style: none;
+    }
+
+    &-picture {
+      font-size: 0;
+    }
+
+    &-item {
+      font-size: 0;
+    }
+
+    &-item1 {
+      grid-column: span 2;
+    }
+  }
+}

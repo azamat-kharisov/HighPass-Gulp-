@@ -1,0 +1,21 @@
+.header__submenu.open .header__submenu-nav {
+  transform: translateX(0);
+}
+
+.header__submenu.open .header__submenu-btn::after {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.header__submenu.open .header__submenu-btn::before {
+  transform-origin: center;
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.header__submenu.open .header__submenu-btn-span {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.header__submenu.open > body {
+  overflow-y: hidden;
+}
